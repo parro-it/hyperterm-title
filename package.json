@@ -1,6 +1,6 @@
 {
   "name": "hyperterm-title",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Set the title of your tabs to what your shell suggests",
   "repository": "parro-it/hyperterm-title",
   "license": "MIT",
