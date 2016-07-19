@@ -2,6 +2,10 @@
 
 let reduxStore;
 
+/*
+ *	weird trick to retrieve redux store
+ *	there should be a better way
+ */
 exports.middleware = store => next => action => {
 	if (!reduxStore) {
 		reduxStore = store;
@@ -9,6 +13,10 @@ exports.middleware = store => next => action => {
 	next(action);
 };
 
+/*
+ *	remove default title setting by set Terms onTitle prop to noop
+ *	maybe it's better to implement a map state to event?
+ */
 exports.decorateTerms = (Terms, {React}) => {
 	return class extends React.Component {
 		render() {
@@ -18,16 +26,21 @@ exports.decorateTerms = (Terms, {React}) => {
 	};
 };
 
+/*
+ *	decorate Term component to extend hterm by handling onTerminal event
+ *  extends hterm object to set `setWindowTitle` method and dispatch a redux action in it.
+ */
 exports.decorateTerm = (Term, {React}) => {
 	const onTerminal = originalOnTerminal => term => {
 		term.setWindowTitle = title => {
 			if (reduxStore) {
+				// temporary use active tab, there should be a way to
+				// find the uid of this particular hterm instance...
 				const uid = reduxStore.getState().sessions.activeUid;
 				reduxStore.dispatch({
 					type: 'SESSION_SET_XTERM_TITLE',
 					uid,
-					title,
-					custom: true
+					title
 				});
 			}
 		};
