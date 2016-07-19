@@ -1,0 +1,21 @@
+{
+  "name": "hyperterm-title",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "parro-it/hyperterm-title",
+  "license": "MIT",
+  "author": "Andrea Parodi",
+  "scripts": {
+    "test": "xo"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=5"
+  },
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "xo": "^0.14.0"
+  }
+}
