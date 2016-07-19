@@ -1,6 +1,6 @@
 {
   "name": "hyperterm-title",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "repository": "parro-it/hyperterm-title",
   "license": "MIT",
@@ -16,7 +16,6 @@
     "index.js"
   ],
   "devDependencies": {
-
     "xo": "^0.14.0"
   }
 }
