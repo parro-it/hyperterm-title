@@ -32,7 +32,7 @@ exports.decorateTerm = (Term, {React}) => {
 /*
  *	remove process title setting by canceling action
  */
-exports.middleware = store => next => action => {
+exports.middleware = () => next => action => {
 	if (action.type !== 'SESSION_SET_PROCESS_TITLE') {
 		next(action);
 	}

@@ -16,6 +16,7 @@
     "index.js"
   ],
   "devDependencies": {
+
     "xo": "^0.14.0"
   }
 }
