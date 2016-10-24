@@ -28,6 +28,15 @@ Then install `hyperterm-title`:
 hpm i hyperterm-title
 ```
 
+# Usage
+
+To test this out, you can tell the shell to suggest a different title:
+
+```bash
+function title() { echo -e "\033]0;${1:?please specify a title}\007" ; }
+
+title "Hyper Title"
+```
 
 # License
 
