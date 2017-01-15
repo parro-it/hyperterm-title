@@ -1,3 +1,8 @@
+# DEPRECATED
+
+hyperterm-title features are now included in hyper core, so this plugin is now deprecated.
+It doesn't work at all from version 1.0.0 of hyper.
+
 # hyperterm-title
 
 > Set the title of your tabs to what your shell suggests
